@@ -8,8 +8,6 @@ matrix:
     - os: linux
       jdk: openjdk7
 
-install:
-
 script:
 - mvn -f kafka-connector/pom.xml clean package
 - mvn -f jms-light/pom.xml clean package
