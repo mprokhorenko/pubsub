@@ -353,6 +353,7 @@ class FakeSubscriberServiceImpl extends SubscriberImplBase {
             pullResponses.clear();
             receivedPullRequest.clear();
             currentStream = 0;
+            messageAckDeadline.set(0);
           }
         }
       }
