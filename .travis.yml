@@ -1,4 +1,5 @@
 language: java
+
 matrix:
   include:
     - os: linux
@@ -9,8 +10,7 @@ matrix:
       jdk: openjdk7
 
 script:
-- mvn -f kafka-connector/pom.xml clean package
-- mvn -f jms-light/pom.xml clean package
-- mvn -f load-test-framework/pom.xml clean package
-- mvn -f client/pom.xml package
-
+- mvn -f kafka-connector/pom.xml clean verify
+- mvn -f jms-light/pom.xml clean verify
+- mvn -f load-test-framework/pom.xml clean verify
+- mvn -f client/pom.xml clean verify
