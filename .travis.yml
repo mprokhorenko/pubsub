@@ -10,8 +10,8 @@ matrix:
       jdk: openjdk7
 
 script:
-  - mvn -q -f kafka-connector/pom.xml clean verify
   - mvn -q -f jms-light/pom.xml clean verify
+  - mvn -q -f kafka-connector/pom.xml clean verify
   - mvn -q -f client/pom.xml clean verify
         -Dmaven.javadoc.skip=true
         -Dgpg.skip=true
