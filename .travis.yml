@@ -13,4 +13,6 @@ script:
 - mvn -f kafka-connector/pom.xml clean verify
 - mvn -f jms-light/pom.xml clean verify
 - mvn -f load-test-framework/pom.xml clean verify
-- mvn -f client/pom.xml clean verify -Dgpg.skip=true -Dmaven.javadoc.skip=true -Djava.util.logging.config.file=client/src/test/resources/logging.properties
+- mvn -f client/pom.xml clean verify \
+      -Dmaven.javadoc.skip=true \
+      -Djava.util.logging.config.file=client/src/test/resources/logging.properties
