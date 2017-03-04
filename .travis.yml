@@ -12,9 +12,6 @@ matrix:
 script:
   - mvn -q -f jms-light/pom.xml clean verify
   - mvn -q -f kafka-connector/pom.xml clean verify
-  - mvn -q -f client/pom.xml clean verify
-        -Dmaven.javadoc.skip=true
-        -Dgpg.skip=true
-        -Djava.util.logging.config.file=client/src/test/resources/logging.properties
+  - mvn -q -f client/pom.xml clean verify -Dmaven.javadoc.skip=true -Dgpg.skip=true -Djava.util.logging.config.file=client/src/test/resources/logging.properties
   - jdk_switcher use oraclejdk8
   - mvn -q -f load-test-framework/pom.xml clean verify
